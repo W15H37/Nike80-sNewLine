@@ -1,0 +1,1184 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+  overscroll-behavior: none;
+  height: 100vh;
+  background-color: #FF6FE8;
+}
+
+.backToStart{
+    position: fixed;
+    width: 250px;
+    height: 50px;
+    right: -100px;
+    bottom: 80px;
+    background-color: transparent;
+    z-index: 20;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+}
+
+.backToStart a{
+    text-decoration: none;
+}
+.backToStart a h2{
+    color: white;
+}
+
+/*//////////// NAV //////////////*/
+.navBar{
+    position: fixed;
+    height: 50px;
+    width: auto;
+    margin: 15px;
+    background-color: transparent;
+    display: flex;
+    z-index: 11;
+}
+
+.menuIconBar{
+    width: 40px;
+    height: 10px;
+    background-color: #fff;
+    margin-bottom: 3px;
+}
+.logoContenedor{
+    width: 100px;
+    height: auto;
+    margin-left: 15px;
+}
+
+.logoImg{
+    width: 100%;
+    height: auto;
+}
+/*///////////MENU //////////*/
+.menuBtn{
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.menuOculto{
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+
+    background-color: #AD00FF;
+    z-index: 100;
+    transition: .3s ease-in-out;
+}
+
+.menuOculto2{
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+
+    background-color: yellow;
+    z-index: 100;
+    transition: .3s ease-in-out;
+}
+
+.contentMenu{
+    display: none;
+}
+
+.totalContentMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuOptions{
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 100px;
+    background-color: #fff;
+    border: solid 4px black;
+    margin: 16.3px 0;
+}
+.nuevaLinea,
+.todosProductos,
+.cestaCompra,
+.nuestrasTiendas{
+    position: relative;
+    transition: .3s;
+}
+.nuevaLinea:hover{
+    background-color: yellow;
+    height: 180px;
+}
+.todosProductos:hover{
+    background-color: yellow;
+    height: 180px;
+}
+.cestaCompra:hover{
+    background-color: yellow;
+    height: 180px;
+}
+.nuestrasTiendas:hover{
+    background-color: yellow;
+    height: 180px;
+}
+
+.nuevaLinea::after{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid 4px;
+    z-index: -1;
+}
+
+.todosProductos::after{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid 4px;
+    z-index: -1;
+}
+.cestaCompra::after{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid 4px;
+    z-index: -1;
+}
+.nuestrasTiendas::after{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid 4px;
+    z-index: -1;
+}
+
+.linkMenu{
+    color: black;
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 90px;
+}
+
+.navMenu{
+    height: 50px;
+    width: auto;
+    margin: 15px 15px 15px 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.closeMenu{
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+}
+.closeLogo{
+    width: 40px;
+    height: 10px;
+    background-color: #fff;
+    border: none;
+}
+
+.animationText{
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    height: 100vh;
+}
+
+.textAnimation{
+    font-size: 8rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: .21s ease-in-out;
+}
+.textAnimation:nth-child(1){transition-delay: .03s;}
+.textAnimation:nth-child(2){transition-delay: .06s;}
+.textAnimation:nth-child(3){transition-delay: .09s;}
+.textAnimation:nth-child(4){transition-delay: .12s;}
+.textAnimation:nth-child(5){transition-delay: .14s;}
+
+
+.dance{
+    position: absolute;
+    left: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 700px;
+    height: auto;
+    display: none;
+    transition: .3s ease-in-out;
+}
+
+.dance .danceIMG{
+    width: 100%;
+    height: 100%;
+}
+
+/*/////////////// CONTENT /////////////*/
+.container {
+    overscroll-behavior: none;
+    width: 400%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+
+
+/*//////////////// HEADER /////////////*/
+.header{
+    min-width: 1920px;
+    height: 100vh;
+    background-color: #FF6FE8;
+    display: flex;
+}
+.tituloHeader{
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    color: lightblue;
+    font-size: 9rem;
+}
+.tituloLinea{
+    color: white;
+    z-index: 12;
+}
+.tituloLinea::before{
+    content: 'Línea';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    color: #00D1FF;
+    z-index: 10;
+}
+.tituloNike{
+    margin-left: 30%;
+    color: white;
+}
+.tituloNike::before{
+    position: absolute;
+    content: 'Nike';
+    color: #AD00FF;
+    top: 275px;
+    left: 150px;
+}
+
+.imgContenedor{
+    width: 58%;
+    height: 70%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 110px;
+    background-position: center;
+    animation: appear 1s;
+}
+
+.imgHeader{
+    width: 100%;
+    height: 100%;
+    
+}
+.container80s{
+    margin-left: 50px;
+    cursor: default;
+}
+.sHead{
+    color: white;
+    font-weight: bold;
+    font-size: 18rem;
+    line-height: 16rem;
+}
+
+
+/*//////////////////////////////////////////*/
+
+.nikePromotion{
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #FF6FE8;
+
+    position: relative;
+}
+
+.contentNikePromotion{
+    width: 1920px;
+    height: 87vh;
+    display: flex;
+    background-color: #FFF358;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    border-left: 4px solid;
+    border-right: none;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 1;
+}
+.contentNikePromotion2{
+    width: 1920px;
+    height: 87vh;
+    display: flex;
+    background-color: #FFF358;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    border-left: none;
+    border-right: 4px solid;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 1;
+}
+.bola1{
+    position: absolute;
+    width: 62%;
+    height: auto;
+    z-index: 2;
+}
+
+.bola2{
+    position: absolute;
+    width: 62%;
+    height: auto;
+    z-index: 2;
+    bottom: 0;
+}
+
+.infoShoe1{
+    position: absolute;
+    width: 560px;
+    height: 330px;
+    background-color: #fff;
+    bottom: 500px;
+    left: 1200px;
+    border: 4px solid;
+    padding: 30px;
+    z-index: 2;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.infoShoe1::after{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 4px solid;
+    z-index: -1;
+}
+.infoShoe2{
+    position: absolute;
+    width: 560px;
+    height: 330px;
+    background-color: #fff;
+    bottom: 100px;
+    left: 100px;
+    border: 4px solid;
+    padding: 30px;
+    z-index: 2;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.infoShoe2::after{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 4px solid;
+    z-index: -1;
+}
+
+
+.titleInfo{
+    width: 100%;
+    height: auto;
+    font-size: 3.2rem;
+}
+
+.textInfo{
+    width: 100%;
+    height: auto;
+    font-size: 1.125rem;
+}
+
+.verMasSecc{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.verMasBtn{
+    width: 190px;
+    height: 60px;
+    background-color: transparent;
+    border: 3px solid;
+    border-radius: 9px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+.verMasBtn::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: .1s ease-in-out;
+}
+.verMasBtn:hover p{
+    color: white;
+}
+.verMasBtn:hover:after{
+    height: 100%;
+}
+
+.leftArrow{
+    width: 50px;
+    height: auto;
+    margin-right: 30px;
+}
+
+.leftArrow2{
+    width: 50px;
+    height: auto;
+    margin-left: 30px;
+    transform: rotate(180deg);
+}
+.shoeImage1{
+    width: 44%;
+    height: auto;
+    position: absolute;
+    z-index: 4;
+    top: 150px;
+    left: 300px;
+}
+.shoeImage2{
+    width: 44%;
+    height: auto;
+    position: absolute;
+    z-index: 4;
+    top: 80px;
+    left: 600px;
+}
+/*////////////// ////////////////*/
+
+.aboutNike{
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #FF6FE8;
+
+    position: relative;
+}
+
+/*///////////////////////////////*/
+
+/*///////////// MODAL ////////////*/
+
+    .modalShoe{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .3);
+        position: fixed;
+        display: none;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        
+    }
+    .contentModal{
+        width: 80vw;
+        height: 90vh;
+        background-color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid 4px black;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        transform: translateY(-100%);
+        transition: .3s;
+
+        display: flex;
+        justify-content: center;
+        flex-flow: row;
+    }
+    .navModal{
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .closeModal{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+        margin: 16px 16px 0 0;
+        z-index: 20;
+    }
+.infoModal-contenedor{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoModal:before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    border: solid 4px black;
+    z-index: -1;
+}
+.infoModal{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: relative;
+    width: 70%;
+    height: 70%;
+    padding: 50px;
+
+    background-color: #fff;
+    border: solid 4px black;
+}
+.tituloModalInfo{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 50%;
+    align-items: flex-start;
+}
+.tituloModalInfo h1{
+    margin-bottom: 20px;
+}
+.precioModal{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: 50%;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.precioModal  h1{
+    font-size: 3rem;
+}
+.comprar{
+    background-color: transparent;
+    border: solid 3px black;
+    border-radius: 11px;
+    width: 180px;
+    height: 55px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.carrito{
+    background-color: transparent;
+    border: solid 3px black;
+    border-radius: 11px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+
+
+.imageModal-contenedor{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.bolaModal{
+    position: absolute;
+    border-radius: 100%;
+    background-color: #00FF94;
+    width: 100px;
+    height: 100px;
+    left: 260px;
+    top: 100px;
+}
+
+.bolaModal:nth-child(1){
+    background-color: #00FF94;
+    width: 520px;
+    height: 520px;
+    left: 120px;
+    top: 260px;
+}
+.bolaModal:nth-child(2){
+    background-color: #00FF94;
+    width: 200px;
+    height: 200px;
+    left: 420px;
+    top: 30px;
+}
+
+.bolaModal:nth-child(3){
+    background-color: #00FF94;
+    width: 200px;
+    height: 200px;
+    left: 1200px;
+    top: 600px;
+    z-index: -2;
+}
+
+.imageModal{
+    position: absolute;
+    width: 600px;
+    height: auto;
+    left: 220px;
+    top: 140px;
+    z-index: 20;
+}
+
+.purple{
+    background-color: purple;
+}
+
+/*///////////////////////////////*/
+.footer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #5B00A3;
+    margin-left: 100px;
+}
+
+.container80s2{
+    margin-left: 50px;
+    cursor: default;
+    transform: rotate(180deg);
+}
+
+.infoFooter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    color: white;
+    justify-content: end;
+    align-items: top;
+    padding: 50px;
+}
+
+.infoFooter ul{
+    list-style: none;
+}
+
+.vinculosFooter{
+    margin-bottom: 55px;
+}
+
+.vinculosFooter ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.vinculosFooter ul li a:hover{
+    color: yellow;
+}
+.social{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+}
+.socialIMG{
+    width: 100%;
+    height: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.info{
+    margin-top: 15px;
+}
+
+
+@media (max-width: 1280px){
+
+    .container {
+        overscroll-behavior: auto;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .header{
+    min-width: 100vw;
+    height: 100vh;
+    background-color: #FF6FE8;
+    display: flex;
+}
+    .tituloHeader{
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    color: lightblue;
+    font-size: 9rem;
+    }
+    .imgHeader{
+        display: none;
+    }
+    .container80s{
+    position: absolute;
+    right: 0;
+    top: 500px;
+    margin-left: 0;
+    cursor: default;
+    z-index: 9;
+    }
+    .sHead{
+    font-size: 10rem;
+    line-height: 10rem;
+}
+    .nikePromotion{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF6FE8;
+    position: relative;
+    }
+    .aboutNike{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        background-color: #FF6FE8;
+
+        position: relative;
+    }
+
+    .contentNikePromotion{
+    width: 0%;
+    height: 0%;
+    display: none;
+    background-color: transparent;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: none;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 1;
+    }
+    .contentNikePromotion2{
+    width: 1920px;
+    height: 87vh;
+    display: none;
+    background-color: #FFF358;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    border-left: none;
+    border-right: 4px solid;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 1;
+    }
+    .bola1{
+        display: none;
+    }
+    .infoShoe1{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    border: 4px solid;
+    padding: 30px;
+    z-index: 10;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: flex-end;
+    }
+    .infoShoe2{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    border: 4px solid;
+    padding: 30px;
+    z-index: 10;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: flex-end;
+    }
+    .bola2{
+        display: none;
+    }
+    .container80s2{
+        display: none;
+    }
+    .footer{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    background-color: #5B00A3;
+    margin-left: 0px;
+    }
+    .backToStart{
+        display: none;
+    }
+    .leftArrow{
+        display: none;
+    }
+    .leftArrow2{
+        display: none;
+    }
+    .verMasSecc{
+    width: 70%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .shoeImage1{
+    width: 54%;
+    height: auto;
+    position: absolute;
+    z-index: 4;
+    top: 150px;
+    left: 300px;
+    z-index: 11;
+    }
+    .shoeImage2{
+    width: 54%;
+    height: auto;
+    position: absolute;
+    z-index: 4;
+    top: 50px;
+    left: 300px;
+    z-index: 11;
+    }
+
+
+    /*menu oculto*/
+
+
+.animationText {
+    display: none;
+}
+.totalContentMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tituloNike{
+    z-index: 11;
+}
+}
+
+@media (max-width: 412px){
+
+    .imgContenedor{
+        display: none;
+    }
+
+    .tituloHeader{
+        width: 100%;
+        height: 30%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-flow: column;
+    }
+
+    .tituloLinea{
+        display: flex;
+        font-size: 5rem;
+        z-index: 10;
+    }
+    .tituloLinea:before{
+        display: none;
+    }
+
+    .tituloNike{
+        display: flex;
+        font-size: 12rem;
+        margin-left: 0;
+        color: lightblue;
+        line-height: 9rem;
+        z-index: 10;
+    }
+    .tituloNike:before{
+        display: none;
+    }
+
+    .container80s{
+        right: 10px;
+        top: 460px;
+        z-index: 9;
+    }
+
+    .sHead{
+        font-size: 8rem;
+        line-height: 6rem;
+    }
+
+    .nikePromotion{
+        height: 70vh;
+    }
+
+    .aboutNike{
+        height: 70vh;
+    }
+
+    .infoShoe1{
+        border: 3px solid;
+        padding: 10px;
+        flex-flow: column;
+        align-items: start;
+        justify-content: flex-end;
+        border-radius: 12px;
+    }
+    .infoShoe1:after{
+        display: none;
+    }
+
+    .infoShoe2{
+        border: 3px solid;
+        padding: 10px;
+        flex-flow: column;
+        align-items: start;
+        justify-content: flex-end;
+        border-radius: 12px;
+    }
+    .infoShoe2:after{
+        display: none;
+    }
+
+    .verMasSecc{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .verMasBtn{
+        width: 100%;
+    }
+
+    .titleInfo{
+        padding: 4px;
+        font-size: 1.5rem;
+    }
+
+    .textInfo{
+        padding: 4px 4px 20px 4px;
+        font-size: 1rem;
+    }
+
+    .shoeImage1{
+        width: 65%;
+        top: 100px;
+        left: 80px;
+        z-index: 10;
+    }
+
+    .shoeImage2{
+        width: 65%;
+        top: 30px;
+        left: 80px;
+        z-index: 10;
+    }
+
+    /*menu oculto*/
+
+    .totalContentMenu{
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuOptions{
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .option{
+        width: 90%;
+        height: 60px;
+        border: solid 3px black;
+        margin: 16.3px 0;
+    }
+
+    .linkMenu{
+        font-size: 1rem;
+        line-height: 55px;
+    }
+
+    .navMenu{
+        z-index: 12;
+    }
+
+    .modalShoe{
+        z-index: 100;
+    }
+
+    .contentModal{
+        width: 100vw;
+        border: solid 3px black;
+    }
+
+    .bcShoes{
+        display: none;
+    }
+    .infoModal{
+        width: 100%;
+        height: 90%;
+        padding: 10px;
+        border: solid 0px black;
+        justify-content: space-between;
+    }
+    .infoModal:before{
+        display: none;
+    }
+
+    .imageModal{
+        width: 250px;
+        height: auto;
+        left: 70px;
+        top: 370px;
+    }
+
+    .precioModal {
+        height: 50%;
+        padding: 0 10px 0 10px;
+    }
+
+    .tituloModalInfo{
+        padding: 20px;
+        height: 50%;
+    }
+
+    .infoModal-contenedor {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .imageModal-contenedor{
+        width: 0%;
+    }
+
+    .comprar{
+        width: 140px;
+        font-size: .9rem;
+        border: solid 2px black;
+    }
+
+    .carrito{
+        border: solid 2px black;
+    }
+}
